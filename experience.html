@@ -1,33 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Experience | Georgios Tsialas</title>
-
-  <meta name="description" content="Georgios Tsialas academic website" />
+  <title>Talks and Public Engagement | Georgios Tsialas</title>
+  <meta name="description" content="Talks, workshops, panel discussions, and public engagement by Georgios Tsialas, PhD Candidate in Politics at King’s College London." />
   <meta name="author" content="Georgios Tsialas" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
-
-  <link rel="canonical" href="https://georgios-tsialas.github.io/" />
+  <link rel="canonical" href="https://georgios-tsialas.github.io/talks.html" />
 
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Experience | Georgios Tsialas" />
-  <meta property="og:description" content="Georgios Tsialas academic website" />
+  <meta property="og:title" content="Talks and Public Engagement | Georgios Tsialas" />
+  <meta property="og:description" content="Talks, workshops, panel discussions, and public engagement by Georgios Tsialas." />
   <meta property="og:image" content="https://georgios-tsialas.github.io/georgios-tsialas.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Experience | Georgios Tsialas" />
-  <meta name="twitter:description" content="Georgios Tsialas academic website" />
+  <meta name="twitter:title" content="Talks and Public Engagement | Georgios Tsialas" />
+  <meta name="twitter:description" content="Talks, workshops, panel discussions, and public engagement by Georgios Tsialas." />
   <meta name="twitter:image" content="https://georgios-tsialas.github.io/georgios-tsialas.jpg" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
 
   <style>
     :root {
@@ -55,9 +47,9 @@
       margin: 0;
       color: var(--text);
       background: linear-gradient(180deg, #f4fbff 0%, #ffffff 22%, #ffffff 100%);
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 15.5px;
-      line-height: 1.72;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14.5px;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -82,19 +74,10 @@
     .topbar {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       gap: 22px;
       padding: 6px 0 28px;
-      font-size: 14px;
-    }
-
-    .brand {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 25px;
-      font-weight: 700;
-      color: var(--text);
-      border: none;
-      letter-spacing: .1px;
+      font-size: 13px;
     }
 
     .nav {
@@ -117,7 +100,7 @@
 
     .layout {
       display: grid;
-      grid-template-columns: 300px minmax(0,1fr);
+      grid-template-columns: 330px minmax(0,1fr);
       gap: 34px;
       align-items: start;
     }
@@ -134,9 +117,10 @@
 
     .photo {
       width: 100%;
-      aspect-ratio: 1/1.08;
-      object-fit: cover;
-      object-position: center 38%;
+      height: auto;
+      aspect-ratio: auto;
+      object-fit: contain;
+      object-position: center;
       display: block;
       background: #e6f4ff;
     }
@@ -148,25 +132,32 @@
     h1,
     h2,
     h3 {
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      line-height: 1.15;
+      line-height: 1.2;
       color: var(--text);
     }
 
     h1 {
-      font-size: 42px;
-      letter-spacing: -.4px;
-      margin-bottom: 11px;
+      font-size: 34px;
+      letter-spacing: -.3px;
+      margin-bottom: 16px;
     }
 
     h2 {
-      font-size: 30px;
-      margin-bottom: 15px;
+      font-size: 22px;
+      margin-top: 34px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #dbeefb;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
     }
 
     h3 {
-      font-size: 21px;
+      font-size: 19px;
       margin-bottom: 6px;
     }
 
@@ -175,6 +166,7 @@
       font-weight: 500;
       line-height: 1.55;
       margin-top: 5px;
+      font-size: 14px;
     }
 
     .contact-list {
@@ -182,7 +174,7 @@
       padding: 0;
       margin: 20px 0 0;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13.5px;
     }
 
     .contact-list li {
@@ -200,14 +192,14 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 36px;
-      padding: 7px 14px;
+      min-height: 34px;
+      padding: 6px 13px;
       border-radius: 999px;
       border: 1px solid var(--border);
       background: var(--accent-light);
       color: var(--accent-dark);
       font-weight: 700;
-      font-size: 13px;
+      font-size: 12.5px;
     }
 
     .button:hover {
@@ -222,7 +214,7 @@
       border: 1px solid var(--border);
       border-radius: 22px;
       box-shadow: var(--shadow);
-      padding: 42px 48px 46px;
+      padding: 38px 48px 42px;
     }
 
     .eyebrow {
@@ -230,132 +222,76 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: .12em;
-      font-size: 12px;
+      font-size: 11.5px;
       margin-bottom: 11px;
     }
 
     .lead {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 22px;
+      font-size: 18px;
       color: #24435e;
       line-height: 1.55;
-      margin: 0 0 18px;
+      margin: 0 0 22px;
     }
 
     p {
       margin: 0 0 15px;
     }
 
-    .chips,
-    .card-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin: 22px 0 8px;
-    }
-
-    .chip {
-      background: var(--accent-light);
-      color: #1d5f91;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 5px 10px;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .page-links {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 26px;
-    }
-
-    .page-link {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-      background: #f8fcff;
-      color: var(--text);
-    }
-
-    .page-link:hover {
-      text-decoration: none;
-      background: var(--accent-light);
-      border-color: #9ed1f2;
-    }
-
-    .page-link strong {
-      display: block;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 21px;
-      margin-bottom: 4px;
-    }
-
-    .page-link span {
-      display: block;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .item {
-      display: grid;
-      grid-template-columns: 125px minmax(0,1fr);
-      gap: 22px;
-      margin: 0 0 24px;
-      padding-bottom: 22px;
+    .talk-entry {
+      margin-bottom: 26px;
+      padding-bottom: 23px;
       border-bottom: 1px solid #e5f1fa;
     }
 
-    .item:last-child {
+    .talk-entry:last-child {
       margin-bottom: 0;
       padding-bottom: 0;
       border-bottom: none;
     }
 
-    .date {
-      color: var(--soft);
-      font-size: 13px;
-      font-weight: 700;
-      padding-top: 3px;
-    }
-
-    .item-title {
+    .talk-title {
+      font-size: 18px;
       font-weight: 800;
       color: #17324c;
-      margin-bottom: 3px;
+      margin-bottom: 6px;
     }
 
-    .item-meta {
+    .talk-meta {
       color: var(--muted);
       font-size: 14px;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
     }
 
-    .item-desc {
-      color: var(--muted);
-      font-size: 14.5px;
-    }
-
-    .compact-list {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    .compact-list li {
-      margin-bottom: 7px;
-    }
-
-    .back {
+    .talk-date {
       display: inline-block;
-      margin-top: 28px;
+      background: var(--accent-light);
+      color: #1d5f91;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 12px;
       font-weight: 700;
+      margin: 6px 0 10px;
+    }
+
+    .talk-type {
+      font-weight: 800;
+      color: var(--accent-dark);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+
+    .talk-desc {
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .footer {
       color: var(--soft);
-      font-size: 13px;
+      font-size: 12.5px;
       padding: 24px 0 0;
       text-align: center;
     }
@@ -367,7 +303,7 @@
 
       .profile-card {
         position: static;
-        max-width: 420px;
+        max-width: 460px;
       }
 
       .content {
@@ -375,11 +311,7 @@
       }
 
       h1 {
-        font-size: 38px;
-      }
-
-      .page-links {
-        grid-template-columns: 1fr;
+        font-size: 32px;
       }
     }
 
@@ -389,8 +321,7 @@
       }
 
       .topbar {
-        flex-direction: column;
-        align-items: flex-start;
+        justify-content: flex-start;
       }
 
       .nav {
@@ -402,17 +333,12 @@
         padding: 28px 20px 32px;
       }
 
-      .item {
-        grid-template-columns: 1fr;
-        gap: 3px;
-      }
-
       h1 {
-        font-size: 34px;
+        font-size: 30px;
       }
 
       .lead {
-        font-size: 20px;
+        font-size: 17px;
       }
     }
   </style>
@@ -421,16 +347,13 @@
 <body>
   <div class="site">
     <header class="topbar">
-      <a class="brand" href="index.html">Georgios Tsialas</a>
-
       <nav class="nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
-        <a href="education.html">Education</a>
-        <a href="experience.html" class="active">Experience</a>
-        <a href="writing.html">Writing</a>
-        <a href="methods.html">Methods</a>
-        <a href="awards.html">Awards</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="talks.html" class="active">Talks and Public Engagement</a>
+        <a href="experience.html">Professional Experience</a>
+        <a href="writing.html">Opinion Pieces and Articles</a>
       </nav>
     </header>
 
@@ -440,8 +363,8 @@
           src="georgios-tsialas.jpg"
           alt="Georgios Tsialas"
           class="photo"
-          width="900"
-          height="945"
+          width="1248"
+          height="1248"
         />
 
         <div class="profile-info">
@@ -470,75 +393,93 @@
       </aside>
 
       <article class="content">
-        <div class="eyebrow">Experience</div>
+        <div class="eyebrow">Talks and Public Engagement</div>
 
-        <h1>Academic and Professional Experience</h1>
+        <h1>Talks and Public Engagement</h1>
 
-        <div class="item">
-          <div class="date">May 2026</div>
-          <div>
-            <div class="item-title">Workshop Co-organizer and Presenter</div>
-            <div class="item-meta">
-              European Law and Governance School, Italy
-            </div>
-            <div class="item-desc">
-              Co-organized and presented the workshop
-              “From Crisis to Polycrisis: Understanding and Managing Entangled
-              Crises” with the ELGS Academic Affairs Team.
-            </div>
+        <p class="lead">
+          Selected invited lectures, workshops, panel discussions, and public-facing
+          academic engagement.
+        </p>
+
+        <h2>Upcoming</h2>
+
+        <div class="talk-entry">
+          <div class="talk-title">
+            From Crisis to Polycrisis: Understanding and Managing Entangled Crises
           </div>
+
+          <div class="talk-meta">
+            European Law and Governance School, Italy
+          </div>
+
+          <div class="talk-date">
+            May 2026
+          </div>
+
+          <div class="talk-type">
+            Workshop
+          </div>
+
+          <p class="talk-desc">
+            Workshop co-organized and presented with the ELGS Academic Affairs Team.
+            The session is designed for students and academic staff interested in
+            understanding polycrisis both as an academic concept and as a policy
+            problem.
+          </p>
         </div>
 
-        <div class="item">
-          <div class="date">Apr 2026</div>
-          <div>
-            <div class="item-title">Guest Lecturer</div>
-            <div class="item-meta">
-              New York University, United Kingdom
-            </div>
-            <div class="item-desc">
-              Delivered a lecture titled “Polycrisis: Core Concepts and Empirical
-              Analysis” for Dr Georgios Giannakopoulos’ module.
-            </div>
+        <h2>Invited lectures</h2>
+
+        <div class="talk-entry">
+          <div class="talk-title">
+            Polycrisis: Core Concepts and Empirical Analysis
           </div>
+
+          <div class="talk-meta">
+            New York University, United Kingdom
+          </div>
+
+          <div class="talk-date">
+            April 2026
+          </div>
+
+          <div class="talk-type">
+            Guest lecture
+          </div>
+
+          <p class="talk-desc">
+            Guest lecture delivered for Dr Georgios Giannakopoulos’ module. The
+            lecture introduced the concept of polycrisis and discussed how it can
+            be approached empirically in political analysis.
+          </p>
         </div>
 
-        <div class="item">
-          <div class="date">2023–2025</div>
-          <div>
-            <div class="item-title">
-              Research Administrator and Research Assistant
-            </div>
-            <div class="item-meta">
-              Hellenic Observatory Centre for Research on Contemporary Greece and
-              Cyprus, LSE
-            </div>
-            <div class="item-desc">
-              Supported academic and research tasks; assisted Professor Kevin
-              Featherstone on projects related to text and sentiment analysis; and
-              helped supervise the publication process for funded research and the
-              GreeSE Working Paper Series.
-            </div>
-          </div>
-        </div>
+        <h2>Panel discussions</h2>
 
-        <div class="item">
-          <div class="date">2020–2024</div>
-          <div>
-            <div class="item-title">
-              Senior Political Editor / Senior Political Analyst
-            </div>
-            <div class="item-meta">
-              Association of International and European Affairs
-            </div>
-            <div class="item-desc">
-              Conducted scientific research and analysis, coordinated with editors,
-              monitored research progress, and organised publication schedules.
-            </div>
+        <div class="talk-entry">
+          <div class="talk-title">
+            The Future of European Defence: Priorities, Challenges and Diplomatic Leadership
           </div>
-        </div>
 
-        <a class="back" href="index.html">← Back to welcome page</a>
+          <div class="talk-meta">
+            King’s College London and Centre for International Security and Economic Strategy
+          </div>
+
+          <div class="talk-date">
+            February 2026
+          </div>
+
+          <div class="talk-type">
+            Panel discussion
+          </div>
+
+          <p class="talk-desc">
+            Participation in an academic and policy-oriented discussion on European
+            defence, strategic autonomy, challenges of coordination, and diplomatic
+            leadership.
+          </p>
+        </div>
       </article>
     </main>
 
@@ -548,3 +489,4 @@
   </div>
 </body>
 </html>
+```
