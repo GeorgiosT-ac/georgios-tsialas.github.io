@@ -262,8 +262,7 @@
       margin: 0 0 15px;
     }
 
-    .chips,
-    .card-grid {
+    .chips {
       display: flex;
       flex-wrap: wrap;
       gap: 9px;
@@ -278,95 +277,6 @@
       padding: 5px 10px;
       font-size: 13px;
       font-weight: 600;
-    }
-
-    .page-links {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 26px;
-    }
-
-    .page-link {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-      background: #f8fcff;
-      color: var(--text);
-    }
-
-    .page-link:hover {
-      text-decoration: none;
-      background: var(--accent-light);
-      border-color: #9ed1f2;
-    }
-
-    .page-link strong {
-      display: block;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 21px;
-      margin-bottom: 4px;
-    }
-
-    .page-link span {
-      display: block;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .item {
-      display: grid;
-      grid-template-columns: 125px minmax(0,1fr);
-      gap: 22px;
-      margin: 0 0 24px;
-      padding-bottom: 22px;
-      border-bottom: 1px solid #e5f1fa;
-    }
-
-    .item:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-
-    .date {
-      color: var(--soft);
-      font-size: 13px;
-      font-weight: 700;
-      padding-top: 3px;
-    }
-
-    .item-title {
-      font-weight: 800;
-      color: #17324c;
-      margin-bottom: 3px;
-    }
-
-    .item-meta {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 5px;
-    }
-
-    .item-desc {
-      color: var(--muted);
-      font-size: 14.5px;
-    }
-
-    .compact-list {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    .compact-list li {
-      margin-bottom: 7px;
-    }
-
-    .back {
-      display: inline-block;
-      margin-top: 28px;
-      font-weight: 700;
     }
 
     .footer {
@@ -393,10 +303,6 @@
       h1 {
         font-size: 38px;
       }
-
-      .page-links {
-        grid-template-columns: 1fr;
-      }
     }
 
     @media (max-width: 580px) {
@@ -416,11 +322,6 @@
 
       .content {
         padding: 28px 20px 32px;
-      }
-
-      .item {
-        grid-template-columns: 1fr;
-        gap: 3px;
       }
 
       h1 {
@@ -511,38 +412,6 @@
           <span class="chip">Greek politics</span>
           <span class="chip">Text analysis</span>
           <span class="chip">LLMs</span>
-        </div>
-
-        <div class="page-links" aria-label="Website sections">
-          <a class="page-link" href="research.html">
-            <strong>Research</strong>
-            <span>PhD project, interests, and research agenda.</span>
-          </a>
-
-          <a class="page-link" href="education.html">
-            <strong>Education</strong>
-            <span>King’s College London, LSE, and Panteion University.</span>
-          </a>
-
-          <a class="page-link" href="experience.html">
-            <strong>Experience</strong>
-            <span>Academic, research, editorial, and invited roles.</span>
-          </a>
-
-          <a class="page-link" href="writing.html">
-            <strong>Writing</strong>
-            <span>Selected analyses, articles, and public-facing work.</span>
-          </a>
-
-          <a class="page-link" href="methods.html">
-            <strong>Methods</strong>
-            <span>R, Python, NVivo, qualitative and quantitative training.</span>
-          </a>
-
-          <a class="page-link" href="awards.html">
-            <strong>Awards</strong>
-            <span>Funding, grants, languages, and affiliations.</span>
-          </a>
         </div>
       </article>
     </main>
