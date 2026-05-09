@@ -1,3 +1,6 @@
+Yes — this version shows **“Georgios Tsialas” only once visually**, underneath the photo. I removed the name from the top-left header and changed the main title to **“Welcome”**.
+
+```html id="r7pqax"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,18 +93,10 @@
     .topbar {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       gap: 22px;
       padding: 6px 0 28px;
       font-size: 14px;
-    }
-
-    .brand {
-      font-size: 25px;
-      font-weight: 700;
-      color: var(--text);
-      border: none;
-      letter-spacing: .1px;
     }
 
     .nav {
@@ -302,8 +297,7 @@
       }
 
       .topbar {
-        flex-direction: column;
-        align-items: flex-start;
+        justify-content: flex-start;
       }
 
       .nav {
@@ -329,8 +323,6 @@
 <body>
   <div class="site">
     <header class="topbar">
-      <a class="brand" href="index.html">Georgios Tsialas</a>
-
       <nav class="nav" aria-label="Main navigation">
         <a href="index.html" class="active">Home</a>
         <a href="research.html">Research</a>
@@ -380,7 +372,7 @@
       <article class="content">
         <div class="eyebrow">Welcome</div>
 
-        <h1>Georgios Tsialas</h1>
+        <h1>Welcome</h1>
 
         <p class="lead">
           I am a PhD Candidate in Politics at King’s College London. My research
@@ -413,3 +405,4 @@
   </div>
 </body>
 </html>
+```
