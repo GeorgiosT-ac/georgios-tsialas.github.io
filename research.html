@@ -22,134 +22,135 @@
 
   <style>
     :root {
-      --bg: #ffffff;
-      --paper: #ffffff;
-      --text: #16324f;
-      --muted: #536a7f;
-      --soft: #7c94aa;
-      --accent: #2f80c0;
-      --accent-dark: #155a8a;
-      --accent-light: #eaf6ff;
-      --border: #cfe5f5;
-      --shadow: 0 18px 45px rgba(21, 90, 138, 0.10);
+      --text: #1f2933;
+      --muted: #5f6f7a;
+      --accent: #2b74a8;
+      --border: #dce8f2;
+      --light: #f4f9fd;
     }
 
     * {
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
+      background: #ffffff;
       color: var(--text);
-      background: linear-gradient(180deg, #f4fbff 0%, #ffffff 22%, #ffffff 100%);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 14.5px;
+      font-size: 15px;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
 
     a {
-      color: var(--accent-dark);
+      color: var(--accent);
       text-decoration: none;
-      border-bottom: 1px solid rgba(47,128,192,.25);
-      transition: .15s ease;
     }
 
     a:hover {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
+      text-decoration: underline;
     }
 
-    .site {
-      max-width: 1120px;
+    .page {
+      max-width: 900px;
       margin: 0 auto;
-      padding: 26px 28px 54px;
+      padding: 28px 24px 48px;
     }
 
     .topbar {
       display: flex;
-      align-items: center;
       justify-content: flex-end;
-      gap: 22px;
-      padding: 6px 0 28px;
-      font-size: 13px;
+      align-items: center;
+      margin-bottom: 44px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
     }
 
     .nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 17px;
-      justify-content: flex-end;
+      gap: 18px;
+      font-size: 14px;
     }
 
     .nav a {
       color: var(--muted);
-      border: none;
-      font-weight: 600;
+      font-weight: 500;
     }
 
-    .nav a:hover,
-    .nav a.active {
-      color: var(--accent-dark);
+    .nav a.active,
+    .nav a:hover {
+      color: var(--accent);
+      text-decoration: none;
     }
 
     .layout {
       display: grid;
-      grid-template-columns: 330px minmax(0,1fr);
-      gap: 34px;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 42px;
       align-items: start;
     }
 
-    .profile-card {
-      background: var(--paper);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      position: sticky;
-      top: 22px;
+    .profile {
+      text-align: center;
     }
 
     .photo {
-      width: 100%;
+      width: 220px;
+      max-width: 100%;
       height: auto;
-      aspect-ratio: auto;
       object-fit: contain;
       object-position: center;
       display: block;
-      background: #e6f4ff;
+      margin: 0 auto 14px;
+      border-radius: 4px;
+      background: var(--light);
     }
 
-    .profile-info {
-      padding: 22px 22px 24px;
+    .profile-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #172b3a;
+      margin-bottom: 5px;
     }
 
-    h1,
-    h2,
-    h3,
-    h4 {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      line-height: 1.2;
-      color: var(--text);
+    .profile-role {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.45;
+      margin-bottom: 12px;
+    }
+
+    .profile-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 13.5px;
+    }
+
+    .profile-links a {
+      border: 1px solid var(--border);
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--light);
     }
 
     h1 {
-      font-size: 34px;
-      letter-spacing: -.3px;
-      margin-bottom: 16px;
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 0 20px;
+      font-weight: 700;
+      color: #172b3a;
     }
 
     h2 {
-      font-size: 22px;
-      margin-top: 34px;
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid #dbeefb;
+      font-size: 20px;
+      margin: 36px 0 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+      color: #172b3a;
     }
 
     h2:first-of-type {
@@ -157,246 +158,121 @@
     }
 
     h3 {
-      font-size: 19px;
-      margin-bottom: 6px;
-    }
-
-    h4 {
       font-size: 16px;
-      margin: 18px 0 8px;
-    }
-
-    .role {
-      color: var(--muted);
-      font-weight: 500;
-      line-height: 1.55;
-      margin-top: 5px;
-    }
-
-    .contact-list {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0 0;
-      color: var(--muted);
-      font-size: 13.5px;
-    }
-
-    .contact-list li {
-      margin: 8px 0;
-    }
-
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 34px;
-      padding: 6px 13px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--accent-light);
-      color: var(--accent-dark);
-      font-weight: 700;
-      font-size: 12.5px;
-    }
-
-    .button:hover {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-      text-decoration: none;
-    }
-
-    .content {
-      background: rgba(255,255,255,.96);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      padding: 38px 48px 42px;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      font-size: 11.5px;
-      margin-bottom: 11px;
-    }
-
-    .lead {
-      font-size: 18px;
-      color: #24435e;
-      line-height: 1.55;
-      margin: 0 0 22px;
+      margin: 0 0 4px;
+      color: #172b3a;
     }
 
     p {
       margin: 0 0 15px;
     }
 
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      font-size: 11.5px;
+      margin-bottom: 10px;
+    }
+
     .entry {
-      margin-bottom: 25px;
-      padding-bottom: 22px;
-      border-bottom: 1px solid #e5f1fa;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
     }
 
     .entry:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
       border-bottom: none;
     }
 
     .entry-title {
-      font-size: 18px;
-      font-weight: 800;
-      color: #17324c;
-      margin-bottom: 6px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #172b3a;
+      margin-bottom: 4px;
     }
 
     .entry-meta {
       color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-
-    .entry-status {
-      display: inline-block;
-      background: var(--accent-light);
-      color: #1d5f91;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: 12px;
-      font-weight: 700;
-      margin: 6px 0 10px;
+      font-size: 13.5px;
+      margin-top: 2px;
     }
 
     .abstract-label {
-      font-weight: 800;
-      color: var(--accent-dark);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      margin-top: 12px;
+      margin-top: 10px;
       margin-bottom: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     .abstract {
       color: var(--muted);
       font-size: 14px;
+      margin-bottom: 0;
     }
 
     .footer {
-      color: var(--soft);
-      font-size: 12.5px;
-      padding: 24px 0 0;
+      margin-top: 48px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
       text-align: center;
     }
 
-    @media (max-width: 860px) {
-      .layout {
-        grid-template-columns: 1fr;
-      }
-
-      .profile-card {
-        position: static;
-        max-width: 460px;
-      }
-
-      .content {
-        padding: 34px 28px 38px;
-      }
-
-      h1 {
-        font-size: 32px;
-      }
-    }
-
-    @media (max-width: 580px) {
-      .site {
-        padding: 18px 16px 42px;
-      }
-
+    @media (max-width: 760px) {
       .topbar {
         justify-content: flex-start;
+        margin-bottom: 32px;
       }
 
       .nav {
-        justify-content: flex-start;
         gap: 12px;
       }
 
-      .content {
-        padding: 28px 20px 32px;
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .profile {
+        text-align: left;
+      }
+
+      .photo {
+        margin-left: 0;
+      }
+
+      .profile-links {
+        justify-content: flex-start;
       }
 
       h1 {
-        font-size: 30px;
-      }
-
-      .lead {
-        font-size: 17px;
+        font-size: 29px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="site">
+  <div class="page">
     <header class="topbar">
       <nav class="nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="research.html" class="active">Research</a>
         <a href="teaching.html">Teaching</a>
-        <a href="experience.html">Talks and Public Engagment</a>
+        <a href="talks.html">Talks and Public Engagement</a>
         <a href="writing.html">Opinion Pieces and Articles</a>
       </nav>
     </header>
 
     <main class="layout">
-      <aside class="profile-card" aria-label="Profile information">
-        <img
-          src="georgios-tsialas.jpg"
-          alt="Georgios Tsialas"
-          class="photo"
-          width="1248"
-          height="1248"
-        />
-
-        <div class="profile-info">
-          <h3>Georgios Tsialas</h3>
-
-          <div class="role">
-            PhD Candidate in Politics<br />
-            Department of Political Economy<br />
-            King’s College London
-          </div>
-
-          <ul class="contact-list">
-            <li>London, United Kingdom</li>
-            <li>
-              <a href="mailto:georgios.tsialas@kcl.ac.uk">
-                georgios.tsialas@kcl.ac.uk
-              </a>
-            </li>
-          </ul>
-
-          <div class="button-row">
-            <a class="button" href="CV_Georgios_Tsialas.pdf">CV</a>
-            <a class="button" href="mailto:georgios.tsialas@kcl.ac.uk">Email</a>
-          </div>
-        </div>
-      </aside>
-
-      <article class="content">
+      <article>
         <div class="eyebrow">Research</div>
+        <h1>Research</h1>
 
         <h2>Publications</h2>
 
@@ -418,7 +294,7 @@
             Abstract to be added.
           </p>
         </div>
-      
+
         <div class="entry">
           <div class="entry-title">
             Successful Securitization: The Case of Small and Big States
@@ -428,8 +304,30 @@
             Abstract to be added.
           </p>
         </div>
+      </article>
 
-        </article>
+      <aside class="profile" aria-label="Profile information">
+        <img
+          src="georgios-tsialas.jpg"
+          alt="Georgios Tsialas"
+          class="photo"
+          width="1248"
+          height="1248"
+        />
+
+        <div class="profile-name">Georgios Tsialas</div>
+
+        <div class="profile-role">
+          PhD Candidate in Politics<br />
+          Department of Political Economy<br />
+          King’s College London
+        </div>
+
+        <div class="profile-links">
+          <a href="CV_Georgios_Tsialas.pdf">CV</a>
+          <a href="mailto:georgios.tsialas@kcl.ac.uk">Email</a>
+        </div>
+      </aside>
     </main>
 
     <footer class="footer">
